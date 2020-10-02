@@ -49,8 +49,9 @@ Greatest Decrease in Profits: {Results[len(Results)-1][0]} ( $ {Results[len(Resu
 """)
 
 AnalysisFile="Financial Analysis"
+SavePath=os.path.join("Analysis",AnalysisFile)
 
-with open(AnalysisFile, "w", newline='', encoding="utf-8-sig") as datafile:
+with open(SavePath, "w", newline='', encoding="utf-8-sig") as datafile:
     writer=csv.writer(datafile)
     writer.writerow(['Finacial Analysis'])
     writer.writerow(['-------------------------------------------------------------------'])
