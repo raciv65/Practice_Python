@@ -48,7 +48,7 @@ Greatest Increase in Profits: {Results[0][0]} ( $ {Results[0][1]:,})
 Greatest Decrease in Profits: {Results[len(Results)-1][0]} ( $ {Results[len(Results)-1][0]})
 """)
 
-AnalysisFile="Financial Analysis"
+AnalysisFile="Financial Analysis.txt"
 SavePath=os.path.join("Analysis",AnalysisFile)
 
 with open(SavePath, "w", newline='', encoding="utf-8-sig") as datafile:
