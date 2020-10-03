@@ -1,2 +1,2 @@
-# Practice_Python
-To practice Python scrips and comminent with terminal
+# Python Challenge
+Homework to create Python scrips to practice coding.
