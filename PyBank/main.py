@@ -1,6 +1,6 @@
 import os
 import csv
-
+# To solve the challenge of Python, by creating a Python script for analyzing the financial records of one company.
 RawData=os.path.join("Resources","02-Homeworks_03-Python_Instructions_PyBank_Resources_budget_data.csv")
 DateData=[]
 GainData=[]
@@ -35,9 +35,9 @@ def averange(numbers):
     else:
         return 0
 
-DateData.remove(DateData[0])
+DateData.remove(DateData[0]) #To have the same legth of Delta list
 DeltaValues=zip(DateData,Delta)
-Results=sorted(DeltaValues, key=lambda x:x[1], reverse=True)
+Results=sorted(DeltaValues, key=lambda x:x[1], reverse=True) #Sort by profit to loss
 
 print(f"""Financial Analysis
 ---------------------------------------------------------------------
@@ -45,11 +45,10 @@ Total Months {MonthsTotal}
 Total: {GainTotal:,} 
 Averange Change: $ {round(averange(Delta),2):,}
 Greatest Increase in Profits: {Results[0][0]} ( $ {Results[0][1]:,})
-Greatest Decrease in Profits: {Results[len(Results)-1][0]} ( $ {Results[len(Results)-1][0]})
+Greatest Decrease in Profits: {Results[len(Results)-1][0]} ( $ {Results[len(Results)-1][1]})
 """)
 
-AnalysisFile="Financial Analysis.txt"
-SavePath=os.path.join("Analysis",AnalysisFile)
+SavePath=os.path.join("Analysis","Financial Analysis.txt")
 
 with open(SavePath, "w", newline='', encoding="utf-8-sig") as datafile:
     writer=csv.writer(datafile)
