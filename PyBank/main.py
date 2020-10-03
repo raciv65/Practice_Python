@@ -46,11 +46,7 @@ Total Months {MonthsTotal}
 Total: {GainTotal:,} 
 Averange Change: $ {round(averange(Delta),2):,}
 Greatest Increase in Profits: {Results[0][0]} ( $ {Results[0][1]:,})
-<<<<<<< HEAD
 Greatest Decrease in Profits: {Results[len(Results)-1][0]} ( $ {Results[len(Results)-1][1]:,})
-=======
-Greatest Decrease in Profits: {Results[len(Results)-1][0]} ( $ {Results[len(Results)-1][1]:,})
->>>>>>> 7b020388208d5b67563936a9d9967036d2bf508b
 """)
 
 SavePath=os.path.join("Analysis","Financial Analysis.txt")
