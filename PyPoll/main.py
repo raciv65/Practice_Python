@@ -17,7 +17,16 @@ for candidate in set(CandidateData):
     Candidates.append(candidate)
     Votes.append(CandidateData.count(candidate))
 
-zipped=zip(Candidates, Votes)
-data={candidato:número for candidato, número in zipped}
-lista=sorted(data.items(), key=lambda x:x[1], reverse=True)
-print(lista)
+Summary=zip(Candidates, Votes)
+ElectionsResults=sorted(Summary, key=lambda x: x[1], reverse=True)
+
+print(f'''Election Results
+-----------------------------------------------
+Total Votes: {int(total)}
+-----------------------------------------------''')
+for CandidateResults in ElectionsResults:
+    print(f'{CandidateResults[0]}  : {round(((CandidateResults[1]/total)*100),2)}% ( {CandidateResults[1]})')
+print(f'''-----------------------------------------------
+Winner: {ElectionsResults[0][0]}
+-----------------------------------------------''')
+
