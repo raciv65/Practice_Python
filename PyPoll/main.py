@@ -41,7 +41,7 @@ with open(ElectionsFile, "w", newline='', encoding="UTF-8") as datafile:
     writer.writerow(['-----------------------------------------------'])
 
     for row in ElectionsResults:
-        writer.writerow([str(row[0])+': {:.2%}'.format(row[1]/total)]+' ( {:n})'.format(row[1]))
+        writer.writerow([str(row[0])+': {:.2%}'.format(row[1]/total)+' ( {:n})'.format(row[1])])
 
     writer.writerow(['-----------------------------------------------'])
     writer.writerow(['Winner: '+str(ElectionsResults[0][0])])
