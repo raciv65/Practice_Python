@@ -1,6 +1,6 @@
 import os
 import csv
-
+# To solve the challenge of Python, by creating a Python script for analyzing the financial records of one company.
 RawData=os.path.join("Resources","02-Homeworks_03-Python_Instructions_PyBank_Resources_budget_data.csv")
 
 DateData=[]
